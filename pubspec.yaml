@@ -17,3 +17,12 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/media/images/
+    - assets/media/images/highlights/
+    - assets/concerts.json
+fonts:
+  - family: Manier
+    fonts:
+      - asset: assets/fonts/manier-font-family/Manier-Medium.otf
+        weight: 600
