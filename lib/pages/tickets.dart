@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:skillswedstrijd/components/nav.dart';
-import 'package:skillswedstrijd/pages/agenda.dart';
-import 'package:skillswedstrijd/pages/contact.dart';
 import 'dart:convert';
 
-import 'package:skillswedstrijd/pages/homepage.dart';
 
 class Tickets extends StatefulWidget {
   final int ticket;

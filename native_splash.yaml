@@ -1,0 +1,7 @@
+flutter_native_splash: 
+  android: true
+  ios: false
+  web: false
+  color: "#f1f1f8"
+
+  branding: "assets/media/images/echo_logo.png"

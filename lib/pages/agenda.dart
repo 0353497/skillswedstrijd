@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:skillswedstrijd/components/nav.dart';
-import 'package:skillswedstrijd/pages/contact.dart';
+import 'package:skillswedstrijd/pages/tickets.dart';
 import 'dart:convert';
 
-import 'package:skillswedstrijd/pages/homepage.dart';
-import 'package:skillswedstrijd/pages/tickets.dart';
 
 class Agenda extends StatefulWidget {
   const Agenda({super.key, index});

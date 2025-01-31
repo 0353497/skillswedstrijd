@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
 
-import 'package:skillswedstrijd/pages/tickets.dart';
 
 class Contact extends StatefulWidget {
   const Contact({super.key, index});
