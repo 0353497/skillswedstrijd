@@ -12,9 +12,9 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        fontFamily: 'Manier',
+        fontFamily: 'Manrope',
       ),
-      home: const Homepage(),
+      home: Homepage(),
     );
   }
 }

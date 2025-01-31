@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'dart:convert';
 
 import 'package:skillswedstrijd/pages/agenda.dart';
+import 'package:skillswedstrijd/pages/contact.dart';
 import 'package:skillswedstrijd/pages/tickets.dart';
 
 class Homepage extends StatefulWidget {
@@ -39,7 +40,7 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(fontFamily: 'Manier'),
+      theme: ThemeData(fontFamily: 'Manrope'),
       home: Scaffold(
         backgroundColor: Color.fromRGBO(241, 241, 248, 1),
         body: Container(
@@ -95,12 +96,14 @@ class _HomepageState extends State<Homepage> {
                           SingleChildScrollView(
                             scrollDirection: Axis.horizontal,
                             child: Row(
-                              spacing: 20,
+                              spacing: 5,
                               children: [
                                 if (concerten.isNotEmpty)
                                   ...List.generate(concerten.length, (i) {
-                                    return SizedBox(
-                                      width: 250,
+                                    //als het highlighted is
+                                    if (i == 6 || i == 9 || i == 13) {
+                                      return SizedBox(
+                                        width: 350,
                                       child: Card(
                                         color: Color.fromRGBO(215, 164, 146, 1),
                                         shape: RoundedRectangleBorder(
@@ -111,7 +114,7 @@ class _HomepageState extends State<Homepage> {
                                           children: [
                                             Image.asset(
                                               'assets/media/${concerten[i]['imageUrl']}',
-                                              width: 250,
+                                                width: 350,
                                               height: 200,
                                             ),
                                             Row(
@@ -177,6 +180,11 @@ class _HomepageState extends State<Homepage> {
                                         ),
                                       ),
                                     );
+                                    } else {
+                                      return SizedBox(
+                                        width: 0,
+                                      );
+                                    }
                                   })
                               ],
                             ),
@@ -304,6 +312,17 @@ class _HomepageState extends State<Homepage> {
                         },
                         icon: Icon(
                           Icons.calendar_month,
+                          color: Color.fromRGBO(241, 241, 248, 1),
+                        )),
+                    IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Contact()));
+                        },
+                        icon: Icon(
+                          Icons.contact_mail,
                           color: Color.fromRGBO(241, 241, 248, 1),
                         )),
                   ],

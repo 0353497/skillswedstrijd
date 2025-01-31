@@ -26,3 +26,6 @@ fonts:
     fonts:
       - asset: assets/fonts/manier-font-family/Manier-Medium.otf
         weight: 600
+  - family:  Manrope
+    fonts:
+      - assets/fonts/Manrope/static/

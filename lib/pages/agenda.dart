@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:skillswedstrijd/pages/contact.dart';
 import 'dart:convert';
 
 import 'package:skillswedstrijd/pages/homepage.dart';
@@ -141,6 +142,15 @@ class _AgendaState extends State<Agenda> {
                     },
                     icon: Icon(
                       Icons.calendar_month,
+                      color: Color.fromRGBO(241, 241, 248, 1),
+                    )),
+                IconButton(
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Contact()));
+                    },
+                    icon: Icon(
+                      Icons.contact_mail,
                       color: Color.fromRGBO(241, 241, 248, 1),
                     )),
               ],
